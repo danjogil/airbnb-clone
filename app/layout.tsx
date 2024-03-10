@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
-import RegisterModal from "./components/modals/RegisterModal";
-import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
+import { Nunito } from "next/font/google";
+import Navbar from "./components/navbar/Navbar";
+import RegisterModal from "./components/modals/RegisterModal";
 
 export const metadata: Metadata = {
   title: "Airbnb",
