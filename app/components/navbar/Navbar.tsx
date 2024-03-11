@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import Container from "../Container";
 import Categories from "./Categories";
 import Logo from "./Logo";
@@ -23,7 +24,9 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
           </div>
         </Container>
       </div>
-      <Categories />
+      <Suspense>
+        <Categories />
+      </Suspense>
     </div>
   );
 };

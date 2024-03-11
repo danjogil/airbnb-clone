@@ -1,19 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // images: {
-  //   domains: [
-  //     "avatars.githubusercontent.com",
-  //     "lh3.googleusercontent.com",
-  //     "res.cloudinary.com",
-  //   ],
-  // },
-  async headers() {
-    return [
+  images: {
+    remotePatterns: [
       {
-        source: "/:path*",
-        headers: [{ key: "referrer-policy", value: "no-referrer" }],
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
       },
-    ];
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
+    ],
   },
 };
 
